@@ -7,7 +7,9 @@ export const settings = {
   slidesToScroll: 1,
   arrows: false,
   draggable: false,
-
+  swipeToSlide: false,
+  swipe: false,
+  touchMove: false,
   responsive: [
     {
       breakpoint: 1536,
