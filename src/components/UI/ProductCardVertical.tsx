@@ -115,7 +115,7 @@ export default function ProductCardVertical({ product }: Props) {
                 </p>
               </div>
             </div>
-            <div className=" opacity-0 group-hover:opacity-100 absolute  flex items-end justify-between w-full border-y border-white-50 transition ease-in-out delay-150">
+            <div className=" opacity-0 group-hover:opacity-100 absolute z-10  flex items-end justify-between w-full border-y border-white-50 transition ease-in-out delay-150">
               <button className="flex justify-center items-center select-none p-2 h-12 w-12  ">
                 <EyeIcon className="" />
               </button>
