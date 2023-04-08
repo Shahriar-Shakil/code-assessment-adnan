@@ -19,8 +19,8 @@ export default function ProductCardHorizontal({ product }: Props) {
             src={product.image}
             alt=""
             width="87"
-            height="89"
-            className="w-full  object-contain min-h-[90px] mx-auto"
+            height="120"
+            className="w-full  object-contain min-h-[120px] mx-auto"
           />
         </div>
         <div className=" px-[10px]">
