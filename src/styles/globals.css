@@ -8,3 +8,19 @@
 body {
   font-family: "Inter", sans-serif;
 }
+.timeBox {
+  @apply text-indigo-400 font-bold text-sm leading-[14px] bg-indigo-100 px-[6px] py-2 rounded;
+}
+
+/* react slick */
+
+.slick-track {
+  display: flex;
+  /* gap: 20px; */
+}
+.horizontal-carousel .slick-slide {
+  padding-right: 20px;
+}
+.vertical-carousel .slick-slide {
+  @apply space-y-5;
+}

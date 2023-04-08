@@ -3,22 +3,25 @@ import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Badge from "./Badge";
 
-type Props = {};
+type Props = {
+  product: any;
+};
 
-export default function ProductCardVertical({}: Props) {
+export default function ProductCardVertical({ product }: Props) {
   return (
-    <div className="relative border border-white-50 p-5 max-w-[280px]">
+    <div className="relative border border-white-50 p-5 min-w-[280px]">
       {/* card head */}
       <div className="mt-5">
         <Image
-          src="/images/products/product1.png"
+          src={product.image}
           alt=""
           width="214"
           height="161"
+          className="max-h-[160px] object-contain mx-auto"
         />
       </div>
       <div className="absolute top-[10px] left-[10px]">
-        <Badge type="sale">Sale</Badge>
+        <Badge type={product.type}>{product.type}</Badge>
       </div>
       {/* card head */}
       {/* card body */}
@@ -27,8 +30,8 @@ export default function ProductCardVertical({}: Props) {
           Smart tv
         </p>
         <div className="space-y-[15px]">
-          <p className="text-base  leading-[26px] font-medium text-black">
-            Sanung 85Q70A 85 Inch QLED 4K UHD Smart LED Television
+          <p className="text-base  leading-[26px] font-medium text-black line-clamp-2 lg:line-clamp-none">
+            {product.name}
           </p>
           <div className="flex items-end space-x-[6px]">
             <div className="flex items-center">
@@ -59,10 +62,10 @@ export default function ProductCardVertical({}: Props) {
           </div>
           <div className="flex items-end space-x-1">
             <p className="text-green-400 tracking-['-0.03em'] text-base font-bold leading-4 ">
-              $2036.00
+              ${product.price}
             </p>
             <p className="text-gray-200 text-xs leading-3 font-medium  line-through">
-              $3000.00
+              ${product.oldPrice}
             </p>
           </div>
         </div>

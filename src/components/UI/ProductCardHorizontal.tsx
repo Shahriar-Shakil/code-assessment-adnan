@@ -1,12 +1,13 @@
 import { StarIcon } from "@heroicons/react/20/solid";
-import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Badge from "./Badge";
-type Props = {};
+type Props = {
+  product: any;
+};
 
-export default function ProductCardHorizontal({}: Props) {
+export default function ProductCardHorizontal({ product }: Props) {
   return (
-    <div className="relative   border border-white-50 py-[30px] px-[50px] max-w-[560px]">
+    <div className="relative   border border-white-50 bg-white-900  py-[30px] px-[50px] max-w-[560px]">
       {/* card head */}
       <div className="absolute  top-[10px] left-[10px]">
         <Badge type="sale">Sale</Badge>
@@ -14,10 +15,11 @@ export default function ProductCardHorizontal({}: Props) {
       <div className="flex items-center flex-col md:flex-row">
         <div className=" flex-none  m-0">
           <Image
-            src="/images/products/product-sm1.png"
+            src={product.image}
             alt=""
             width="87"
             height="89"
+            className="w-full  object-contain min-h-[90px] mx-auto"
           />
         </div>
         <div className=" px-[10px]">
@@ -50,7 +52,7 @@ export default function ProductCardHorizontal({}: Props) {
               </p>
             </div>
             <p className="text-base  leading-[26px] font-medium text-black">
-              Sanung 85Q70A 85 Inch QLED 4K UHD Smart LED Television
+              {product.name}
             </p>
 
             <div className="flex items-end space-x-1">
@@ -64,9 +66,6 @@ export default function ProductCardHorizontal({}: Props) {
           </div>
         </div>
       </div>
-
-      {/* card head */}
-      {/* card body */}
     </div>
   );
 }
