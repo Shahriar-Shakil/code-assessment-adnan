@@ -1,7 +1,19 @@
+import LoadingSpinner from "@/components/UI/LoadingSpinner";
 import "@/styles/globals.css";
+import "@/styles/styles.css";
 
 import type { AppProps } from "next/app";
+import React from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  const [loading, setLoading] = React.useState(true);
+  React.useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => {
+      clearTimeout(timeOut);
+    };
+  }, []);
+  return <>{loading ? <LoadingSpinner /> : <Component {...pageProps} />}</>;
 }
