@@ -1,3 +1,4 @@
+import { imageCarousel } from "@/utils";
 import { StarIcon } from "@heroicons/react/20/solid";
 import {
   ArrowsUpDownIcon,
@@ -7,23 +8,43 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Badge from "./Badge";
+import { useRef } from "react";
+import Carousel from "./Carousel";
 
 type Props = {
   product: any;
 };
 
 export default function ProductCardVertical({ product }: Props) {
+  const slider1 = useRef<any>(null);
+
   return (
     <div className="group  relative border border-white-50 p-5 min-w-[280px]">
       {/* card head */}
       <div className="mt-5">
-        <Image
-          src={product.image}
-          alt=""
-          width="214"
-          height="161"
-          className="max-h-[160px] object-contain mx-auto"
-        />
+        <Carousel settings={imageCarousel} sliderRef={slider1}>
+          <Image
+            src={product.image}
+            alt=""
+            width="214"
+            height="161"
+            className="max-h-[160px] object-contain mx-auto"
+          />
+          <Image
+            src={product.image}
+            alt=""
+            width="214"
+            height="161"
+            className="max-h-[160px] object-contain mx-auto"
+          />
+          <Image
+            src={product.image}
+            alt=""
+            width="214"
+            height="161"
+            className="max-h-[160px] object-contain mx-auto"
+          />
+        </Carousel>
       </div>
       <div className="absolute top-[10px] left-[10px]">
         <Badge type={product.type}>{product.type}</Badge>

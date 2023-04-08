@@ -6,6 +6,8 @@ export const settings = {
   slidesToShow: 5,
   slidesToScroll: 1,
   arrows: false,
+  draggable: false,
+
   responsive: [
     {
       breakpoint: 1536,
@@ -49,6 +51,26 @@ export const settingsVertical = {
   rows: 3,
   slidesPerRow: 1,
   arrows: false,
+  // vertical: true,
+  // verticalSwiping: true,
+  swipeToSlide: true,
+  // responsive: [
+  //   {
+  //     breakpoint: 700,
+  //     settings: {
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1,
+  //     },
+  //   },
+  // ],
+};
+export const imageCarousel = {
+  className: "imageCarousel",
+  dots: true,
+  infinite: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
   // vertical: true,
   // verticalSwiping: true,
   swipeToSlide: true,

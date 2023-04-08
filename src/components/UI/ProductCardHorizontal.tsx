@@ -1,4 +1,5 @@
 import { StarIcon } from "@heroicons/react/20/solid";
+import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Badge from "./Badge";
 type Props = {

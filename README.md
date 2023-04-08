@@ -5,6 +5,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
+# first
+go to root folder and install the package first
+# then
 npm run dev
 # or
 yarn dev
