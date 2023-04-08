@@ -12,7 +12,7 @@ export default function Badge({ children, type }: Props) {
     type === "sale"
       ? "bg-red-100 text-red-400"
       : "text-black bg-black bg-opacity-10",
-    "inline-flex items-center rounded-[2px]  p-2 text-xs leading-[11px] font-medium "
+    "inline-flex capitalize items-center rounded-[2px]  p-2 text-xs leading-[11px] font-medium "
   );
   return <span className={classes}>{children}</span>;
 }
