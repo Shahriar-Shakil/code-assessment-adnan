@@ -74,4 +74,13 @@ export const imageCarousel = {
   slidesToScroll: 1,
   arrows: false,
   swipeToSlide: true,
+  // responsive: [
+  //   {
+  //     breakpoint: 700,
+  //     settings: {
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1,
+  //     },
+  //   },
+  // ],
 };

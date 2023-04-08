@@ -8,19 +8,19 @@ type Props = {
 
 export default function ProductCardHorizontal({ product }: Props) {
   return (
-    <div className="relative   border border-white-50 bg-white-900  py-[30px] px-[50px] max-w-[560px]">
+    <div className="relative   border border-white-50 bg-white-900  py-[30px] px-6 md:px-[50px] max-w-[560px]">
       {/* card head */}
       <div className="absolute  top-[10px] left-[10px]">
         <Badge type="sale">Sale</Badge>
       </div>
       <div className="flex items-center flex-col md:flex-row">
-        <div className=" flex-none  m-0">
+        <div className="w-[150px]">
           <Image
             src={product.image}
             alt=""
-            width="87"
+            width="120"
             height="120"
-            className="w-full  object-contain min-h-[120px] mx-auto"
+            className="object-contain "
           />
         </div>
         <div className=" px-[10px]">
