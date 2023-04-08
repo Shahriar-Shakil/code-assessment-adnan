@@ -1,6 +1,8 @@
 import { imageCarousel } from "@/utils";
 import { StarIcon } from "@heroicons/react/20/solid";
 import {
+  ArrowLongLeftIcon,
+  ArrowLongRightIcon,
   ArrowsUpDownIcon,
   EyeIcon,
   HeartIcon,
@@ -21,7 +23,22 @@ export default function ProductCardVertical({ product }: Props) {
   return (
     <div className="group  relative border border-white-50 p-5 min-w-[280px]">
       {/* card head */}
-      <div className="mt-5">
+      <div className="mt-5 relative">
+        <div className="opacity-0 group-hover:opacity-100 transition ease-in-out delay-150">
+          <button
+            onClick={() => slider1.current.slickPrev()}
+            className="z-10 absolute top-1/2 -left-4 bg-black text-white-900 rounded-full w-8 h-8 flex justify-center items-center"
+          >
+            <ArrowLongLeftIcon className=" w-5 " />
+          </button>
+          <button
+            onClick={() => slider1.current.slickNext()}
+            className="z-10 absolute top-1/2 -right-4 bg-black text-white-900 rounded-full w-8 h-8 flex justify-center items-center"
+          >
+            <ArrowLongRightIcon className=" w-5 " />
+          </button>
+        </div>
+
         <Carousel settings={imageCarousel} sliderRef={slider1}>
           <Image
             src={product.image}

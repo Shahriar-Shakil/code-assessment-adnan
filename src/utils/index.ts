@@ -72,17 +72,6 @@ export const imageCarousel = {
   infinite: false,
   slidesToShow: 1,
   slidesToScroll: 1,
-  arrows: true,
-  // vertical: true,
-  // verticalSwiping: true,
+  arrows: false,
   swipeToSlide: true,
-  // responsive: [
-  //   {
-  //     breakpoint: 700,
-  //     settings: {
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1,
-  //     },
-  //   },
-  // ],
 };
