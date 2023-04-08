@@ -3,7 +3,7 @@ import { productsFashion } from "@/utils/data";
 import { ArrowLongLeftIcon } from "@heroicons/react/20/solid";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import { useRef } from "react";
-import ProductCarousel from "./UI/Carousel";
+import { default as Carousel, default as ProductCarousel } from "./UI/Carousel";
 import ProductCardHorizontal from "./UI/ProductCardHorizontal";
 type Props = {};
 
@@ -40,11 +40,11 @@ export default function TrendingProduct({}: Props) {
               </button>
             </div>
           </div>
-          <ProductCarousel settings={settingsVertical} sliderRef={slider1}>
+          <Carousel settings={settingsVertical} sliderRef={slider1}>
             {productsFashion.map((product, index) => (
               <ProductCardHorizontal key={index} product={product} />
             ))}
-          </ProductCarousel>
+          </Carousel>
           <button className="bg-black rounded  text-sm leading-[15px] font-bold uppercase text-white-900 w-full py-[17px]">
             View All
           </button>

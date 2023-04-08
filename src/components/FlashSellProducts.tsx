@@ -5,7 +5,7 @@ import { productsVertical } from "@/utils/data";
 import { ArrowLongLeftIcon } from "@heroicons/react/20/solid";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import { useRef } from "react";
-import ProductCarousel from "./UI/Carousel";
+import Carousel from "./UI/Carousel";
 type Props = {};
 
 export default function FlashSellProducts({}: Props) {
@@ -41,11 +41,11 @@ export default function FlashSellProducts({}: Props) {
             </button>
           </div>
         </div>
-        <ProductCarousel settings={settings} sliderRef={slider}>
+        <Carousel settings={settings} sliderRef={slider}>
           {productsVertical?.map((product, i) => {
             return <ProductCardVertical key={i} product={product} />;
           })}
-        </ProductCarousel>
+        </Carousel>
       </div>
       <div
         className=" invisible lg:visible w-full 

@@ -7,11 +7,7 @@ type Props = {
   settings: any;
 };
 
-export default function ProductCarousel({
-  sliderRef,
-  children,
-  settings,
-}: Props) {
+export default function Carousel({ sliderRef, children, settings }: Props) {
   return (
     <Slider {...settings} ref={sliderRef}>
       {children}
